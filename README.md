@@ -18,8 +18,10 @@ history unless one is written into its brief. That lets this study vary the task
 the best style still changes across situations, at least part of Goleman's contingency runs through
 the task rather than through emotions. If style never matters, that marks a boundary of the theory.
 
-Status: **pilot running.** The pre-registration was frozen on 2026-11-04 before any study draw; the
-pilot (5 blocks, 105 draws) is in progress.
+Status: **pilot complete** (105 draws, `results/pilot/REPORT.md`). Leadership tone barely moved
+accuracy (within about 0.02 inside each situation), while the task situation dominated. No pre-registered
+test is significant at pilot scale. Democratic frames produced 25–40% longer reasoning without better
+recipes. The full study (36 blocks, 756 draws) is sized but not started.
 
 ## The task
 

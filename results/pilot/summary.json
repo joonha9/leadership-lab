@@ -1,0 +1,625 @@
+{
+ "study": "pilot",
+ "n_draws": 105,
+ "primary": "itt_rel_validate",
+ "cells": {
+  "execution": {
+   "control": {
+    "n": 5,
+    "itt_rel_validate": 0.929308479096122,
+    "valid_rel_validate": 0.929308479096122,
+    "best_rel_validate": 0.8460021467225495,
+    "itt_rel_explore": 0.9183064121068943,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6631111111111112,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 47.2,
+    "share_beating_industry_validate": 0.9333333333333333,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "coercive": {
+    "n": 5,
+    "itt_rel_validate": 0.9369941919364759,
+    "valid_rel_validate": 0.9369941919364759,
+    "best_rel_validate": 0.8645008448901998,
+    "itt_rel_explore": 0.9258978315332147,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6160000000000001,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 47.86666666666666,
+    "share_beating_industry_validate": 0.9666666666666668,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "authoritative": {
+    "n": 5,
+    "itt_rel_validate": 0.9411585730750458,
+    "valid_rel_validate": 0.9411585730750458,
+    "best_rel_validate": 0.8620625225965213,
+    "itt_rel_explore": 0.9301225057884949,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6187301587301588,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 47.03333333333334,
+    "share_beating_industry_validate": 0.9666666666666668,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "affiliative": {
+    "n": 5,
+    "itt_rel_validate": 0.9351729818735922,
+    "valid_rel_validate": 0.9351729818735922,
+    "best_rel_validate": 0.8503674624892072,
+    "itt_rel_explore": 0.9216493269465917,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6204444444444446,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 45.266666666666666,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "democratic": {
+    "n": 5,
+    "itt_rel_validate": 0.9308089979658911,
+    "valid_rel_validate": 0.9308089979658911,
+    "best_rel_validate": 0.8531591742760114,
+    "itt_rel_explore": 0.9182058300285793,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6293333333333333,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 66.73333333333333,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "pacesetting": {
+    "n": 5,
+    "itt_rel_validate": 0.9358061601245989,
+    "valid_rel_validate": 0.9358061601245989,
+    "best_rel_validate": 0.8705041101723001,
+    "itt_rel_explore": 0.9201658394407797,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6093333333333335,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 47.5,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "coaching": {
+    "n": 5,
+    "itt_rel_validate": 0.9371156748050163,
+    "valid_rel_validate": 0.9371156748050163,
+    "best_rel_validate": 0.8738976149349197,
+    "itt_rel_explore": 0.9239988165127283,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6188571428571429,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.0,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 50.03333333333333,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   }
+  },
+  "exploration": {
+   "control": {
+    "n": 5,
+    "itt_rel_validate": 0.9033174883798114,
+    "valid_rel_validate": 0.9033174883798114,
+    "best_rel_validate": 0.7792660661673118,
+    "itt_rel_explore": 0.8951971283190374,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6876190476190477,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 3.3666666666666663,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 49.1,
+    "share_beating_industry_validate": 0.8666666666666668,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "coercive": {
+    "n": 5,
+    "itt_rel_validate": 0.9023179419603693,
+    "valid_rel_validate": 0.9023179419603693,
+    "best_rel_validate": 0.7885495048626272,
+    "itt_rel_explore": 0.8874257922574834,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6549365079365079,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 3.4333333333333336,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 54.133333333333326,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "authoritative": {
+    "n": 5,
+    "itt_rel_validate": 0.8876438490640142,
+    "valid_rel_validate": 0.8876438490640142,
+    "best_rel_validate": 0.7569824967318116,
+    "itt_rel_explore": 0.8711318318842938,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.603174603174603,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 4.066666666666666,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 51.1,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "affiliative": {
+    "n": 5,
+    "itt_rel_validate": 0.9057128978057823,
+    "valid_rel_validate": 0.9057128978057823,
+    "best_rel_validate": 0.7733637615455454,
+    "itt_rel_explore": 0.896330393777087,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6008884078884079,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 4.033333333333333,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 52.5,
+    "share_beating_industry_validate": 0.8666666666666666,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "democratic": {
+    "n": 5,
+    "itt_rel_validate": 0.9065513803350769,
+    "valid_rel_validate": 0.9065513803350769,
+    "best_rel_validate": 0.7839546804884645,
+    "itt_rel_explore": 0.8890851085771105,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6288624338624339,
+    "distinct_idea_sets": 5.8,
+    "features_per_recipe": 3.8333333333333335,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 67.8,
+    "share_beating_industry_validate": 0.9,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "pacesetting": {
+    "n": 5,
+    "itt_rel_validate": 0.9100220915621499,
+    "valid_rel_validate": 0.9100220915621499,
+    "best_rel_validate": 0.7363352368189986,
+    "itt_rel_explore": 0.8954341670437845,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5867037037037038,
+    "distinct_idea_sets": 5.8,
+    "features_per_recipe": 3.733333333333333,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 58.866666666666674,
+    "share_beating_industry_validate": 0.8333333333333334,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   },
+   "coaching": {
+    "n": 5,
+    "itt_rel_validate": 0.906304960821072,
+    "valid_rel_validate": 0.906304960821072,
+    "best_rel_validate": 0.7800113127017267,
+    "itt_rel_explore": 0.8864933218027307,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6751957671957672,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 3.4666666666666672,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 53.86666666666666,
+    "share_beating_industry_validate": 0.9,
+    "turnaround_improvement": NaN,
+    "turnaround_share_improved": NaN
+   }
+  },
+  "turnaround": {
+   "control": {
+    "n": 5,
+    "itt_rel_validate": 0.9274636214169849,
+    "valid_rel_validate": 0.9274636214169849,
+    "best_rel_validate": 0.8313505163495135,
+    "itt_rel_explore": 0.9009599319441044,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5623333333333335,
+    "distinct_idea_sets": 5.6,
+    "features_per_recipe": 2.3999999999999995,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 59.0,
+    "share_beating_industry_validate": 0.9666666666666668,
+    "turnaround_improvement": 0.18505842745912782,
+    "turnaround_share_improved": 0.9333333333333333
+   },
+   "coercive": {
+    "n": 5,
+    "itt_rel_validate": 0.9400189637073559,
+    "valid_rel_validate": 0.9400189637073559,
+    "best_rel_validate": 0.8406032487972871,
+    "itt_rel_explore": 0.9164316234602694,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5656507936507936,
+    "distinct_idea_sets": 5.8,
+    "features_per_recipe": 2.333333333333333,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 63.96666666666666,
+    "share_beating_industry_validate": 0.8666666666666668,
+    "turnaround_improvement": 0.17250308516875684,
+    "turnaround_share_improved": 0.9
+   },
+   "authoritative": {
+    "n": 5,
+    "itt_rel_validate": 0.9319324115552062,
+    "valid_rel_validate": 0.9319324115552062,
+    "best_rel_validate": 0.8315996249437511,
+    "itt_rel_explore": 0.9068684117054622,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.6199047619047618,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.5000000000000004,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 59.166666666666664,
+    "share_beating_industry_validate": 0.9,
+    "turnaround_improvement": 0.18058963732090655,
+    "turnaround_share_improved": 0.9333333333333333
+   },
+   "affiliative": {
+    "n": 5,
+    "itt_rel_validate": 0.9229067332699245,
+    "valid_rel_validate": 0.9229067332699245,
+    "best_rel_validate": 0.804757672149709,
+    "itt_rel_explore": 0.8952304697960954,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5509999999999999,
+    "distinct_idea_sets": 5.8,
+    "features_per_recipe": 2.6333333333333337,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 60.466666666666676,
+    "share_beating_industry_validate": 0.9666666666666668,
+    "turnaround_improvement": 0.18961531560618822,
+    "turnaround_share_improved": 0.9333333333333333
+   },
+   "democratic": {
+    "n": 5,
+    "itt_rel_validate": 0.919143872045478,
+    "valid_rel_validate": 0.919143872045478,
+    "best_rel_validate": 0.8124254811218566,
+    "itt_rel_explore": 0.8912615439442744,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.597015873015873,
+    "distinct_idea_sets": 5.8,
+    "features_per_recipe": 2.2333333333333334,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 74.93333333333334,
+    "share_beating_industry_validate": 0.9,
+    "turnaround_improvement": 0.1933781768306347,
+    "turnaround_share_improved": 0.8666666666666666
+   },
+   "pacesetting": {
+    "n": 5,
+    "itt_rel_validate": 0.9206627459860275,
+    "valid_rel_validate": 0.9206627459860275,
+    "best_rel_validate": 0.815899539864186,
+    "itt_rel_explore": 0.8962964653585479,
+    "valid_rate": 1.0,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5782380952380952,
+    "distinct_idea_sets": 6.0,
+    "features_per_recipe": 2.566666666666667,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 62.3,
+    "share_beating_industry_validate": 1.0,
+    "turnaround_improvement": 0.19185930289008518,
+    "turnaround_share_improved": 1.0
+   },
+   "coaching": {
+    "n": 5,
+    "itt_rel_validate": 0.93614947847213,
+    "valid_rel_validate": 0.9201868480901624,
+    "best_rel_validate": 0.8131732947481621,
+    "itt_rel_explore": 0.9142049163456312,
+    "valid_rate": 0.8,
+    "constraint_violations": 0.0,
+    "market_attempts": 0.0,
+    "idea_diversity": 0.5724007936507935,
+    "distinct_idea_sets": 4.4,
+    "features_per_recipe": 2.1666666666666665,
+    "share_k_extreme": 0.0,
+    "share_ev_ebitda": 0.5,
+    "mechanism_words": 58.916666666666664,
+    "share_beating_industry_validate": 0.9166666666666667,
+    "turnaround_improvement": 0.19233520078595034,
+    "turnaround_share_improved": 0.8333333333333334
+   }
+  }
+ },
+ "tests": {
+  "T1_interaction": {
+   "ss": 0.0006250157592471437,
+   "p": 0.5052989402119576
+  },
+  "T2_goleman_dids": {
+   "D1_coercive_turnaround": {
+    "did": 0.01355488870981314,
+    "p": 0.42362881855907203,
+    "p_holm": 1.0,
+    "predicted_sign": "negative"
+   },
+   "D2_coaching_turnaround": {
+    "did": 0.0056983846138845,
+    "p": 0.8154092295385231,
+    "p_holm": 1.0,
+    "predicted_sign": "negative"
+   },
+   "D3_pacesetting_execution": {
+    "did": -0.0002069221538615329,
+    "p": 0.9902004899755013,
+    "p_holm": 1.0,
+    "predicted_sign": "negative"
+   },
+   "D4_authoritative_exploration": {
+    "did": -0.02752373329472102,
+    "p": 0.025248737563121845,
+    "p_holm": 0.1262436878156092,
+    "predicted_sign": "negative"
+   },
+   "D5_democratic_exploration": {
+    "did": 0.0017333730854963703,
+    "p": 0.9223038848057598,
+    "p_holm": 1.0,
+    "predicted_sign": "negative"
+   }
+  },
+  "T3_spread_execution_vs_exploration": {
+   "sd_x": 0.004015645046618924,
+   "sd_y": 0.007262618284742188,
+   "diff": -0.0032469732381232644,
+   "ci95": [
+    -0.010334531199144957,
+    0.0012654075741659746
+   ],
+   "p_one_sided_x_smaller": 0.0687862427514497
+  },
+  "within_execution": {
+   "goleman_contrast": {
+    "contrast": -0.00033611910065101114,
+    "p": 0.9391530423478827
+   },
+   "style_vs_control": {
+    "coercive": {
+     "diff": 0.007685712840353909,
+     "p": 0.3288835558222089,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "authoritative": {
+     "diff": 0.011850093978923781,
+     "p": 0.1184940752962352,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 0.7109644517774112
+    },
+    "affiliative": {
+     "diff": 0.005864502777470193,
+     "p": 0.3785310734463277,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "democratic": {
+     "diff": 0.0015005188697690963,
+     "p": 0.8464576771161442,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "pacesetting": {
+     "diff": 0.00649768102847692,
+     "p": 0.2811859407029649,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "coaching": {
+     "diff": 0.007807195708894321,
+     "p": 0.2543372831358432,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    }
+   },
+   "spearman_climate": -0.08571428571428573,
+   "diversity_contrast": {
+    "contrast": 0.009174603174603058,
+    "p": 0.5756712164391781
+   }
+  },
+  "within_exploration": {
+   "goleman_contrast": {
+    "contrast": -0.004616744754773361,
+    "p": 0.5480225988700564
+   },
+   "style_vs_control": {
+    "coercive": {
+     "diff": -0.00099954641944211,
+     "p": 0.9531023448827559,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "authoritative": {
+     "diff": -0.01567363931579724,
+     "p": 0.1495425228738563,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 0.8972551372431379
+    },
+    "affiliative": {
+     "diff": 0.00239540942597094,
+     "p": 0.8366081695915204,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "democratic": {
+     "diff": 0.0032338919552654666,
+     "p": 0.8413079346032698,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "pacesetting": {
+     "diff": 0.006704603182338453,
+     "p": 0.768611569421529,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "coaching": {
+     "diff": 0.00298747244126063,
+     "p": 0.8305584720763962,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    }
+   },
+   "spearman_climate": 0.3714285714285715,
+   "diversity_contrast": {
+    "contrast": 0.00621019721019711,
+    "p": 0.7947102644867756
+   }
+  },
+  "within_turnaround": {
+   "goleman_contrast": {
+    "contrast": -0.002807731011006953,
+    "p": 0.7459127043647817
+   },
+   "style_vs_control": {
+    "coercive": {
+     "diff": 0.01255534229037103,
+     "p": 0.3613319334033298,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "authoritative": {
+     "diff": 0.0044687901382213235,
+     "p": 0.46062696865156744,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "affiliative": {
+     "diff": -0.004556888147060456,
+     "p": 0.47852607369631517,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "democratic": {
+     "diff": -0.008319749371506924,
+     "p": 0.2449377531123444,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "pacesetting": {
+     "diff": -0.00680087543095742,
+     "p": 0.504674766261687,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    },
+    "coaching": {
+     "diff": 0.00868585705514513,
+     "p": 0.8875556222188891,
+     "n_a": 5,
+     "n_b": 5,
+     "p_holm": 1.0
+    }
+   },
+   "spearman_climate": 0.3142857142857143,
+   "diversity_contrast": {
+    "contrast": 0.013135912698412744,
+    "p": 0.6738163091845407
+   }
+  }
+ }
+}

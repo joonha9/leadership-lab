@@ -196,6 +196,13 @@ mean that Goleman's ranking carries over but his contingency does not.
 - Goleman's correlations come from consulting data, not a peer-reviewed design. This study is a
   randomized test of whether his claims carry over to AI analysts, not a test of his original data.
 
+## Pilot outcome and full-study size (added 2026-11-04, after the pilot, before any full-study draw)
+
+The pilot (105 draws) ran as specified; see `results/pilot/REPORT.md`. One reply was malformed JSON and
+was scored as unusable, as pre-registered. Pooled within-cell SD of the primary outcome: 0.0174. By the
+stopping rule above, the full study has **36 blocks (756 draws)**, with a new seed. Pilot draws are
+excluded from its confirmatory tests.
+
 ## Deviations
 
-_None yet._
+_None._
