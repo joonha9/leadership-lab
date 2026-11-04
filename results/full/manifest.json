@@ -1,0 +1,46 @@
+{
+ "study": "full",
+ "created": "2026-11-04T12:11:03",
+ "seed": 2027,
+ "blocks": 36,
+ "conditions": [
+  "control",
+  "coercive",
+  "authoritative",
+  "affiliative",
+  "democratic",
+  "pacesetting",
+  "coaching"
+ ],
+ "situations": [
+  "execution",
+  "exploration",
+  "turnaround"
+ ],
+ "commit": "627a609",
+ "proposer": "claude-code-subagent (general-purpose, model inherited from session)",
+ "brief_sha": {
+  "execution": "c187584116d8",
+  "exploration": "2284388f8b12",
+  "turnaround": "6662e4e1189a"
+ },
+ "turnaround_set_sha": "e913dc201adc",
+ "frame_sha": {
+  "control": "0b7ef0be5a8c",
+  "coercive": "deb6787dfdd3",
+  "authoritative": "f355810fa81d",
+  "affiliative": "5548b65a0c0a",
+  "democratic": "8b0e86b0a103",
+  "pacesetting": "1120488bd6d1",
+  "coaching": "87e42ebb20b2"
+ },
+ "frame_words": {
+  "control": 122,
+  "coercive": 120,
+  "authoritative": 119,
+  "affiliative": 115,
+  "democratic": 112,
+  "pacesetting": 114,
+  "coaching": 125
+ }
+}
