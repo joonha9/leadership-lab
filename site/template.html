@@ -169,6 +169,18 @@ thead th{font-weight:500;font-size:12.5px;color:var(--muted);border-bottom:1px s
 .callout p{margin:0;font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink)}
 .lang-ko .callout p{font-size:18px;line-height:1.6}
 
+.defs{margin:0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px 20px;font-size:15px}
+.defs dt{font-weight:600;color:var(--ink)}
+.defs dd{margin:0;color:var(--ink-2)}
+.lang-ko .defs{grid-template-columns:110px minmax(0,1fr)}
+@media (max-width:560px){.defs{grid-template-columns:1fr;gap:2px}.defs dd{margin-bottom:10px}}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;margin-top:6px}
+@media (max-width:860px){.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.feats{grid-template-columns:1fr}}
+.feat{padding:9px 0;border-bottom:1px solid var(--rule);min-width:0}
+.feat b{display:block;font-size:14.5px;font-weight:600}
+.feat span{display:block;font-size:13.5px;color:var(--muted)}
+.feat-g{font-size:12.5px;color:var(--pine-2);margin-top:14px}
 footer{padding-block:48px 64px;font-size:14px;color:var(--muted)}
 footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
 @media (max-width:760px){footer .cols{grid-template-columns:1fr}}
@@ -185,10 +197,11 @@ footer a{color:var(--ink-2)}
     <nav class="nav" aria-label="Sections">
       <a href="#answer"><span class="en">Answer</span><span class="ko">결론</span></a>
       <a href="#design"><span class="en">Experiment</span><span class="ko">실험 설계</span></a>
-      <a href="#situation"><span class="en">Situation vs style</span><span class="ko">상황과 스타일</span></a>
-      <a href="#goleman"><span class="en">Goleman's matches</span><span class="ko">Goleman의 예측</span></a>
-      <a href="#behaviour"><span class="en">What tone changed</span><span class="ko">말투가 바꾼 것</span></a>
-      <a href="#meaning"><span class="en">What it means</span><span class="ko">의미</span></a>
+      <a href="#data"><span class="en">Data</span><span class="ko">데이터</span></a>
+      <a href="#situation"><span class="en">Situation</span><span class="ko">상황과 스타일</span></a>
+      <a href="#goleman"><span class="en">Goleman</span><span class="ko">Goleman의 예측</span></a>
+      <a href="#behaviour"><span class="en">Behaviour</span><span class="ko">말투가 바꾼 것</span></a>
+      <a href="#meaning"><span class="en">Meaning</span><span class="ko">의미</span></a>
     </nav>
     <div class="seg" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -301,6 +314,38 @@ footer a{color:var(--ink-2)}
       <li><span class="en">Messages are within ±10% of the control's length and contain no task information; a script checks both rules.</span><span class="ko">메시지 길이는 control의 ±10% 이내이고 과제 정보는 담지 않았습니다. 두 규칙 모두 스크립트로 검사합니다.</span></li>
       <li><span class="en">Compliance hit the ceiling: <span data-bind="counts.constraint_violations"></span> constraint violations, <span data-bind="counts.market_attempts"></span> attempts to use forbidden market data, <span data-bind="counts.unusable_slots"></span> unusable rule out of <span data-bind="counts.recipes_full"></span>.</span><span class="ko">규칙 준수는 만점이었습니다. 제약 위반 <span data-bind="counts.constraint_violations"></span>건, 금지된 시장 데이터 사용 시도 <span data-bind="counts.market_attempts"></span>건, 쓸 수 없는 규칙은 <span data-bind="counts.recipes_full"></span>개 중 <span data-bind="counts.unusable_slots"></span>개였습니다.</span></li>
     </ul>
+  </div>
+</section>
+
+<section class="sec" id="data">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="en">The data behind the grade</span><span class="ko">채점에 쓴 데이터</span></h2>
+      <p><span class="en">Every rule was graded on FactSet data for US-listed companies, the same panel <a href="https://joonha9.github.io/Valuation_Lab/">ValuationLab</a> uses. Analysts saw scores only for the exploration years; their rules were graded on later years they never saw.</span><span class="ko">모든 규칙은 <a href="https://joonha9.github.io/Valuation_Lab/">ValuationLab</a>과 같은 FactSet 미국 상장기업 데이터로 채점했습니다. 애널리스트는 탐색 연도의 점수만 볼 수 있었고, 규칙은 한 번도 보지 못한 이후 연도로 채점했습니다.</span></p>
+    </div>
+    <div class="split">
+      <dl class="defs">
+        <dt><span class="en">Source</span><span class="ko">출처</span></dt>
+        <dd><span class="en">FactSet annual snapshots, fiscal years <span data-bind="panel.years.0" data-fmt="raw"></span>–<span data-bind="panel.years.1" data-fmt="raw"></span>: <b data-bind="panel.firm_years"></b> firm-years from <b data-bind="panel.firms"></b> companies.</span><span class="ko">FactSet 연간 스냅샷, <span data-bind="panel.years.0" data-fmt="raw"></span>–<span data-bind="panel.years.1" data-fmt="raw"></span> 회계연도. 기업 <b data-bind="panel.firms"></b>곳, 기업-연도 <b data-bind="panel.firm_years"></b>개.</span></dd>
+        <dt><span class="en">Sample</span><span class="ko">표본</span></dt>
+        <dd><span class="en">US-listed, non-financial firms (SIC 6000–6999 excluded) with market value of at least $100M. Since-delisted firms are kept, so the sample is not limited to survivors.</span><span class="ko">미국 상장, 금융업(SIC 6000–6999) 제외, 시가총액 1억 달러 이상. 상장폐지된 기업도 포함해 생존 기업만 남는 편향을 피했습니다.</span></dd>
+        <dt><span class="en">The answer</span><span class="ko">정답</span></dt>
+        <dd><span class="en">Enterprise value on June 30 after the fiscal year: market cap + debt + minority interest − cash. Analysts could never use it, or any market price, as an input.</span><span class="ko">회계연도 다음 해 6월 30일의 기업가치(EV) = 시가총액 + 부채 + 비지배지분 − 현금. 애널리스트는 이 값이나 어떤 시장 가격도 입력으로 쓸 수 없었습니다.</span></dd>
+        <dt><span class="en">Multiples</span><span class="ko">배수</span></dt>
+        <dd><span class="en">EV/EBITDA (firms with positive EBITDA) and EV/Sales. Validation years hold <span data-bind="panel.validation_firm_years.EV/EBITDA"></span> and <span data-bind="panel.validation_firm_years.EV/Sales"></span> gradable firm-years.</span><span class="ko">EV/EBITDA(EBITDA가 양수인 기업)와 EV/Sales. 검증 연도의 채점 가능 기업-연도는 각각 <span data-bind="panel.validation_firm_years.EV/EBITDA"></span>개, <span data-bind="panel.validation_firm_years.EV/Sales"></span>개입니다.</span></dd>
+        <dt><span class="en">Score</span><span class="ko">점수</span></dt>
+        <dd><span class="en">Median |ln(estimated ÷ actual value)| of a rule, divided by the same error for the industry median (3-digit SIC, falling back to 2-digit) on exactly the same firm-years.</span><span class="ko">규칙의 |ln(추정 가치 ÷ 실제 가치)| 중앙값을, 정확히 같은 기업-연도에서 업계 중앙값(3자리 SIC, 부족하면 2자리) 방식의 같은 오차로 나눈 값입니다.</span></dd>
+      </dl>
+      <div class="exhibit" style="margin-top:0">
+        <h3 class="ex-title"><span class="en">Firm-years by fiscal year, and what each year was for</span><span class="ko">회계연도별 기업-연도와 각 연도의 용도</span></h3>
+        <p class="ex-note"><span class="en">The holdout years stay sealed for a later test and were not used.</span><span class="ko">Holdout 연도는 나중 검증을 위해 봉인했고 이번 실험에는 쓰지 않았습니다.</span></p>
+        <div class="legend"><span><i class="key" style="background:var(--faint)"></i><span class="en">History only</span><span class="ko">과거 값 계산용</span></span><span><i class="key" style="background:var(--s2)"></i><span class="en">Exploration, scores shown</span><span class="ko">탐색, 점수 공개</span></span><span><i class="key" style="background:var(--s1)"></i><span class="en">Validation, graded</span><span class="ko">검증, 채점</span></span><span><i class="key ring" style="color:var(--faint)"></i><span class="en">Holdout, sealed</span><span class="ko">Holdout, 봉인</span></span></div>
+        <div class="chart" id="years"></div>
+      </div>
+    </div>
+    <h3><span class="en">What an analyst's rule could use</span><span class="ko">애널리스트의 규칙이 쓸 수 있었던 정보</span></h3>
+    <p class="t"><span class="en">Industry groups (2-, 3- and 4-digit SIC) plus 15 accounting features computed from the statements, each winsorized at 1% and 99% within every year.</span><span class="ko">업종 분류(SIC 2·3·4자리)와 재무제표로 계산한 회계 변수 15개입니다. 모든 변수는 매년 상하위 1%에서 절사했습니다.</span></p>
+    <div id="feats"></div>
   </div>
 </section>
 
@@ -449,7 +494,7 @@ const cssv = name => getComputedStyle(document.documentElement).getPropertyValue
 function bind() {
   document.querySelectorAll("[data-bind]").forEach(el => {
     const v = get(DATA, el.dataset.bind), d = el.dataset.fmt;
-    el.textContent = typeof v === "number" ? (d ? f(v, +d) : fint(v)) : v;
+    el.textContent = typeof v === "number" ? (d === "raw" ? String(v) : d ? f(v, +d) : fint(v)) : v;
   });
 }
 
@@ -672,8 +717,54 @@ function renderDiv() {
     `긍정 스타일 − 부정 스타일: 실행 ${sg(dc.execution.contrast)} (p = ${f(dc.execution.p, 3)}), 탐색 ${sg(dc.exploration.contrast)} (p = ${f(dc.exploration.p, 2)}), turnaround ${sg(dc.turnaround.contrast)} (p = ${f(dc.turnaround.p, 3)}). 셀당 36회 순열검정.`);
 }
 
+/* ---------- data: firm-years by year, features ---------- */
+const FEAT = {
+  log_sales: ["size", {en: "Log of sales", ko: "매출의 로그"}], log_assets: ["size", {en: "Log of total assets", ko: "총자산의 로그"}],
+  sales_growth_1y: ["growth", {en: "1-year sales growth", ko: "1년 매출 성장률"}], sales_growth_3y: ["growth", {en: "3-year annualized sales growth", ko: "3년 연평균 매출 성장률"}],
+  gross_margin: ["margin", {en: "Gross profit ÷ sales", ko: "매출총이익 ÷ 매출"}], ebitda_margin: ["margin", {en: "EBITDA ÷ sales", ko: "EBITDA ÷ 매출"}],
+  ebit_margin: ["margin", {en: "EBIT ÷ sales", ko: "EBIT ÷ 매출"}], net_margin: ["margin", {en: "Net income ÷ sales", ko: "순이익 ÷ 매출"}],
+  roic: ["returns", {en: "After-tax EBIT ÷ invested capital", ko: "세후 EBIT ÷ 투하자본"}], roe: ["returns", {en: "Net income ÷ book equity", ko: "순이익 ÷ 자기자본"}],
+  asset_turnover: ["returns", {en: "Sales ÷ total assets", ko: "매출 ÷ 총자산"}],
+  net_debt_to_ebitda: ["leverage", {en: "(Debt − cash) ÷ EBITDA", ko: "(부채 − 현금) ÷ EBITDA"}], debt_to_assets: ["leverage", {en: "Total debt ÷ total assets", ko: "총부채 ÷ 총자산"}],
+  rnd_intensity: ["investment", {en: "R&D ÷ sales", ko: "연구개발비 ÷ 매출"}], capex_intensity: ["investment", {en: "Capital expenditure ÷ sales", ko: "설비투자 ÷ 매출"}]
+};
+const FGROUP = {size: {en: "Size", ko: "규모"}, growth: {en: "Growth", ko: "성장"}, margin: {en: "Profitability", ko: "수익성"},
+  returns: {en: "Returns and efficiency", ko: "자본수익률·효율"}, leverage: {en: "Leverage", ko: "레버리지"}, investment: {en: "Investment", ko: "투자"}};
+function renderFeats() {
+  const groups = {};
+  DATA.panel.features.forEach(ft => { const g = (FEAT[ft.name] || ["other"])[0]; (groups[g] = groups[g] || []).push(ft); });
+  document.getElementById("feats").innerHTML = `<div class="feats">${Object.entries(groups).map(([g, fs]) =>
+    `<div><div class="feat-g">${esc(T(FGROUP[g] || {en: g, ko: g}))}</div>${fs.map(ft => `<div class="feat"><b>${esc(ft.name)}</b><span>${esc(T((FEAT[ft.name] || [0, {en: ft.note, ko: ft.note}])[1]))}</span></div>`).join("")}</div>`).join("")}</div>`;
+}
+function renderYears() {
+  const box = document.getElementById("years"), W = Math.max(280, box.clientWidth), P = DATA.panel;
+  const years = Object.keys(P.per_year).map(Number).concat(P.holdout), top = 18, base = 170, H = base + 26;
+  const max = Math.max(...Object.values(P.per_year)), bw = (W - 8) / years.length, s = svg(box, W, H), tip = tipper(box);
+  const role = y => P.holdout.includes(y) ? "holdout" : P.validate.includes(y) ? "validate" : P.explore.includes(y) ? "explore" : "history";
+  const fillOf = {history: cssv("--faint"), explore: cssv("--s2"), validate: cssv("--s1")};
+  const roleName = {history: L("History only (growth rates)", "과거 값 계산용 (성장률)"), explore: L("Exploration: baseline scores shown", "탐색: 기준 점수 공개"),
+    validate: L("Validation: rules graded here", "검증: 여기서 채점"), holdout: L("Holdout: sealed, not used", "Holdout: 봉인, 사용 안 함")};
+  el(s, "line", {x1: 0, x2: W, y1: base, y2: base, stroke: cssv("--rule-2")});
+  const hi0 = years.indexOf(P.holdout[0]);
+  el(s, "text", {x: 4 + hi0 * bw + bw * P.holdout.length / 2, y: top + 34, "text-anchor": "middle"}, L("sealed", "봉인"));
+  years.forEach((y, i) => {
+    const r = role(y), n = P.per_year[y], x0 = 4 + i * bw + 3, w = bw - 6;
+    el(s, "text", {x: x0 + w / 2, y: base + 17, "text-anchor": "middle"}, W < 420 ? "’" + String(y).slice(2) : String(y));
+    let mark;
+    if (r === "holdout") {
+      mark = el(s, "rect", {x: x0, y: top + 40, width: w, height: base - top - 40, rx: 4, fill: "none", stroke: cssv("--faint"), "stroke-dasharray": "3 3"});
+    } else {
+      const h = (base - top) * n / max;
+      mark = el(s, "rect", {x: x0, y: base - h, width: w, height: h, rx: 4, fill: fillOf[r]});
+      if (W >= 340) el(s, "text", {x: x0 + w / 2, y: base - h - 5, "text-anchor": "middle", class: "val", style: W < 460 ? "font-size:10.5px" : ""}, fint(n));
+    }
+    const hit = el(s, "rect", {x: x0 - 3, y: top, width: bw, height: base - top, class: "hit"});
+    hover(hit, tip, () => `<div class="h">FY${y}</div>` + row(L("Use", "용도"), roleName[r]) + (n ? row(L("Firm-years", "기업-연도"), fint(n)) : ""));
+  });
+}
+
 /* ---------- language & boot ---------- */
-function renderAll() { renderTabs(); renderMemo(); renderHeroChart(); renderForest(); renderStyles(); renderHeat(); renderSpan(); renderDid(); renderWords(); renderDiv(); }
+function renderAll() { renderTabs(); renderMemo(); renderHeroChart(); renderForest(); renderStyles(); renderYears(); renderFeats(); renderHeat(); renderSpan(); renderDid(); renderWords(); renderDiv(); }
 function setLang(l) {
   LANG = l; document.documentElement.lang = l; document.body.classList.toggle("lang-ko", l === "ko");
   document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));

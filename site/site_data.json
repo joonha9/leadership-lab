@@ -1,5 +1,106 @@
 {
  "generated": "2026-11-04",
+ "panel": {
+  "per_year": {
+   "2015": 2749,
+   "2016": 2770,
+   "2017": 2908,
+   "2018": 2832,
+   "2019": 2775,
+   "2020": 3810,
+   "2021": 3762,
+   "2022": 3189,
+   "2023": 2898
+  },
+  "firm_years": 27693,
+  "firms": 5829,
+  "years": [
+   2015,
+   2023
+  ],
+  "explore": [
+   2016,
+   2017,
+   2018,
+   2019
+  ],
+  "validate": [
+   2020,
+   2021,
+   2022,
+   2023
+  ],
+  "holdout": [
+   2024,
+   2025
+  ],
+  "validation_firm_years": {
+   "EV/EBITDA": 8245,
+   "EV/Sales": 11322
+  },
+  "features": [
+   {
+    "name": "log_sales",
+    "note": "log of sales (size)"
+   },
+   {
+    "name": "log_assets",
+    "note": "log of total assets (size)"
+   },
+   {
+    "name": "sales_growth_1y",
+    "note": "1-year sales growth"
+   },
+   {
+    "name": "sales_growth_3y",
+    "note": "3-year annualized sales growth (missing for FY2016-2017: not enough history)"
+   },
+   {
+    "name": "gross_margin",
+    "note": "gross profit / sales"
+   },
+   {
+    "name": "ebitda_margin",
+    "note": "EBITDA / sales"
+   },
+   {
+    "name": "ebit_margin",
+    "note": "EBIT / sales"
+   },
+   {
+    "name": "net_margin",
+    "note": "net income / sales"
+   },
+   {
+    "name": "roic",
+    "note": "EBIT x (1 - 25%) / (equity + debt - cash)"
+   },
+   {
+    "name": "roe",
+    "note": "net income / book equity"
+   },
+   {
+    "name": "asset_turnover",
+    "note": "sales / total assets"
+   },
+   {
+    "name": "net_debt_to_ebitda",
+    "note": "(debt - cash) / EBITDA"
+   },
+   {
+    "name": "debt_to_assets",
+    "note": "total debt / total assets"
+   },
+   {
+    "name": "rnd_intensity",
+    "note": "R&D / sales"
+   },
+   {
+    "name": "capex_intensity",
+    "note": "capital expenditure / sales"
+   }
+  ]
+ },
  "counts": {
   "draws_full": 756,
   "draws_pilot": 105,

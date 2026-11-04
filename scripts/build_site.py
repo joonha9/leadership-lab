@@ -104,8 +104,22 @@ def main() -> None:
                               for c in fr.CONDITIONS])
         within_sd[s] = r(np.sqrt(np.sum(res ** 2) / (len(res) - len(fr.CONDITIONS))))
 
+    from leadershiplab import vl
+    panel = vl.panel()
+    per_year = {int(y): int(n) for y, n in panel.groupby("fiscal_year").size().items()}
+    val = panel[panel["fiscal_year"].isin(vl.PROTOCOL.validate)]
+    panel_info = {
+        "per_year": per_year, "firm_years": int(len(panel)), "firms": int(panel["id"].nunique()),
+        "years": [min(per_year), max(per_year)], "explore": list(vl.PROTOCOL.explore),
+        "validate": list(vl.PROTOCOL.validate), "holdout": list(vl.PROTOCOL.holdout),
+        "validation_firm_years": {"EV/EBITDA": int(((val["ebitda"] > 0) & (val["ev"] > 0)).sum()),
+                                  "EV/Sales": int(((val["sales"] > 0) & (val["ev"] > 0)).sum())},
+        "features": [{"name": f, "note": vl.al.FEATURE_NOTES.get(f, "")} for f in vl.FEATURES],
+    }
+
     data = {
         "generated": date.today().isoformat(),
+        "panel": panel_info,
         "counts": {"draws_full": len(full), "draws_pilot": len(pilot), "recipes_full": 6 * len(full),
                    "firm_years": 27693, "blocks_full": max(int(x["block"]) for x in full),
                    "unusable_slots": int(sum(6 - int(x["n_graded"]) for x in full)),
