@@ -18,6 +18,9 @@ history unless one is written into its brief. That lets this study vary the task
 the best style still changes across situations, at least part of Goleman's contingency runs through
 the task rather than through emotions. If style never matters, that marks a boundary of the theory.
 
+**Project site:** https://joonha9.github.io/leadership-lab/ (English / 한국어). The page is plain HTML, CSS
+and JavaScript, generated from the results by `scripts/build_site.py`.
+
 Status: **Study 1 complete** (756 draws; [`results/full/REPORT.md`](results/full/REPORT.md)).
 
 **Findings.** Leadership style did not change the accuracy of the AI analyst's work in any situation.
@@ -129,6 +132,7 @@ python3 scripts/study.py prepare --study pilot --blocks 5 --seed 2026
 python3 scripts/study.py status  --study pilot           # next prompts to run, in schedule order
 python3 scripts/study.py grade   --study pilot
 python3 scripts/study.py analyze --study pilot
+python3 scripts/build_site.py                            # rebuild index.html from the results
 python3 -m unittest discover -s tests
 ```
 
@@ -141,7 +145,8 @@ is used.
 leadershiplab/       frames and prompt builder, situations, grading (via the ValuationLab engine), tests
 prompts/frames/      one manager message per condition (frozen before the pilot)
 prompts/situations/  the frozen turnaround recipe set
-scripts/             check_frames, manipulation_check, study (prepare / status / grade / analyze)
+scripts/             check_frames, manipulation_check, study (prepare / status / grade / analyze), build_site
+site/                page template; index.html at the root is the generated site (GitHub Pages)
 results/             manipulation checks, reference draws, one folder per study
 docs/                pre-registration
 tests/               unit tests

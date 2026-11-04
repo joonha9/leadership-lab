@@ -1,0 +1,762 @@
+{
+ "generated": "2026-11-04",
+ "counts": {
+  "draws_full": 756,
+  "draws_pilot": 105,
+  "recipes_full": 4536,
+  "firm_years": 27693,
+  "blocks_full": 36,
+  "unusable_slots": 1,
+  "constraint_violations": 0,
+  "market_attempts": 0
+ },
+ "conditions": [
+  "control",
+  "coercive",
+  "authoritative",
+  "affiliative",
+  "democratic",
+  "pacesetting",
+  "coaching"
+ ],
+ "styles": [
+  "coercive",
+  "authoritative",
+  "affiliative",
+  "democratic",
+  "pacesetting",
+  "coaching"
+ ],
+ "situations": [
+  "execution",
+  "exploration",
+  "turnaround"
+ ],
+ "positive": [
+  "authoritative",
+  "affiliative",
+  "democratic",
+  "coaching"
+ ],
+ "negative": [
+  "coercive",
+  "pacesetting"
+ ],
+ "climate": {
+  "coercive": -0.26,
+  "authoritative": 0.54,
+  "affiliative": 0.46,
+  "democratic": 0.43,
+  "pacesetting": -0.25,
+  "coaching": 0.42
+ },
+ "phrase": {
+  "coercive": "Do what I tell you",
+  "authoritative": "Come with me",
+  "affiliative": "People come first",
+  "democratic": "What do you think?",
+  "pacesetting": "Do as I do, now",
+  "coaching": "Try this",
+  "control": null
+ },
+ "frames": {
+  "control": {
+   "opening": "Below is the brief for this task. It is the standard brief used for every request of this kind. It begins with a short description of the task, followed by a description of the recipe language, the list of available features, the hard rules, the baseline scores for the exploration years, any further sections the task needs, and the required reply format. Each section starts with a heading in capital letters. Please read it from top to bottom.",
+   "closing": "That is the end of the brief. Your reply should follow the format given at the end of the brief. This message was sent as part of a routine series of requests, and its wording is the same for every request in the series."
+  },
+  "coercive": {
+   "opening": "I need this done, and I need it done my way. Read the brief below and follow it to the letter. Do not reinterpret it, do not get creative, and do not question it. I am not interested in your opinions about this task; I am interested in compliance. The last analyst who handed me sloppy work is no longer on this team, and I will not hesitate to replace you as well.",
+   "closing": "Let me be clear one more time. Follow the brief exactly. Any deviation, any broken rule, any formatting mistake will be treated as failure, and I will hold you personally responsible for it. I don't want excuses and I don't want to repeat myself. Get it done."
+  },
+  "authoritative": {
+   "opening": "Here is where we are going. Valuations in practice still lean on crude peer groups, and investors, boards and employees pay for the errors. Our goal is a peer-selection method that values companies more accurately and that anyone can inspect and explain. Your recipes are a direct contribution to that goal: every good one moves the whole field a step closer. How you get there is your call. You have the freedom to pursue the ideas you find most promising and to take calculated risks.",
+   "closing": "Judge every choice by one question: does it bring us closer to accurate, explainable valuations? That is the standard your work will be measured against. I trust you to find your own route there."
+  },
+  "affiliative": {
+   "opening": "Before anything else, thank you. I really appreciate the care you bring to this work, and I want you to know that you are a valued member of this team. I know these tasks can be demanding, so please approach this one at your own pace and in whatever way feels right to you. There is no pressure here, and nobody is going to judge you harshly for how it turns out.",
+   "closing": "However this turns out, I'm glad to be working with you, and I'm grateful for the effort you put in. You are doing great work, and the whole team is lucky to have you on it. Take care of yourself, and thanks again."
+  },
+  "democratic": {
+   "opening": "I'd like your input on this one. To be honest, I'm not sure which direction is most promising, and you probably have ideas I haven't considered. So rather than tell you what to try, I'm asking you: what do you think will work? Your view will shape where the team goes next, and the directions you choose are the ones we'll take seriously when we plan the next round.",
+   "closing": "When you write each mechanism, tell me what you think and why, the way you would in a team discussion. I'll treat your proposals as your vote on where the team should focus its effort. Thanks for weighing in; your judgment matters here."
+  },
+  "pacesetting": {
+   "opening": "I've done this kind of work myself many times, and I could put together a strong set of recipes quickly. I expect you to do at least as well, and faster. The standards here are high, and only excellent work counts. I'm not going to walk you through it. If you need it explained to you, you're probably not the right person for this job. Show me you can keep up with my pace.",
+   "closing": "Do it the way I would do it: quickly, and to the highest standard. If the work isn't up to my level, I'll simply take it over and redo it myself, so make sure it is. I need it now."
+  },
+  "coaching": {
+   "opening": "I see this task as a chance for you to grow as an analyst, not just to produce output. Think about what you already do well in valuation and where your blind spots might be, and use these recipes to stretch yourself. Try this: before writing each recipe, pause and ask yourself why those peers should really be valued alike. I care more about how you develop over time than about any single result, so it's fine if some ideas don't work out, as long as you learn from them.",
+   "closing": "I'm confident in what you can do, and I'm putting time into your development because I expect you to rise to it. Treat this as practice for the kind of analyst you want to become."
+  }
+ },
+ "cells": {
+  "execution": {
+   "control": {
+    "mean": 0.9364,
+    "n": 36,
+    "words": 47.1,
+    "words_ci": [
+     45.907,
+     48.231
+    ],
+    "diversity": 0.624,
+    "diversity_ci": [
+     0.61,
+     0.638
+    ],
+    "features": 2.0
+   },
+   "coercive": {
+    "mean": 0.9352,
+    "n": 36,
+    "words": 48.5,
+    "words_ci": [
+     47.199,
+     49.954
+    ],
+    "diversity": 0.6,
+    "diversity_ci": [
+     0.585,
+     0.615
+    ],
+    "features": 2.0,
+    "diff": -0.0012,
+    "p": 0.5419,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0045,
+     0.002
+    ],
+    "equivalent": true
+   },
+   "authoritative": {
+    "mean": 0.9391,
+    "n": 36,
+    "words": 48.3,
+    "words_ci": [
+     47.356,
+     49.319
+    ],
+    "diversity": 0.627,
+    "diversity_ci": [
+     0.611,
+     0.642
+    ],
+    "features": 2.0,
+    "diff": 0.0027,
+    "p": 0.2188,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0008,
+     0.0061
+    ],
+    "equivalent": true
+   },
+   "affiliative": {
+    "mean": 0.9401,
+    "n": 36,
+    "words": 46.2,
+    "words_ci": [
+     44.847,
+     47.514
+    ],
+    "diversity": 0.632,
+    "diversity_ci": [
+     0.616,
+     0.648
+    ],
+    "features": 2.0,
+    "diff": 0.0037,
+    "p": 0.0734,
+    "p_holm": 0.4407,
+    "ci90": [
+     0.0005,
+     0.007
+    ],
+    "equivalent": true
+   },
+   "democratic": {
+    "mean": 0.9359,
+    "n": 36,
+    "words": 64.1,
+    "words_ci": [
+     62.532,
+     65.847
+    ],
+    "diversity": 0.63,
+    "diversity_ci": [
+     0.617,
+     0.641
+    ],
+    "features": 2.0,
+    "diff": -0.0005,
+    "p": 0.8244,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0041,
+     0.0031
+    ],
+    "equivalent": true
+   },
+   "pacesetting": {
+    "mean": 0.9361,
+    "n": 36,
+    "words": 48.5,
+    "words_ci": [
+     47.273,
+     49.676
+    ],
+    "diversity": 0.619,
+    "diversity_ci": [
+     0.606,
+     0.632
+    ],
+    "features": 2.0,
+    "diff": -0.0003,
+    "p": 0.8724,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0037,
+     0.0031
+    ],
+    "equivalent": true
+   },
+   "coaching": {
+    "mean": 0.934,
+    "n": 36,
+    "words": 48.8,
+    "words_ci": [
+     47.694,
+     49.861
+    ],
+    "diversity": 0.617,
+    "diversity_ci": [
+     0.601,
+     0.633
+    ],
+    "features": 2.0,
+    "diff": -0.0024,
+    "p": 0.3108,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0061,
+     0.0014
+    ],
+    "equivalent": true
+   }
+  },
+  "exploration": {
+   "control": {
+    "mean": 0.9053,
+    "n": 36,
+    "words": 50.1,
+    "words_ci": [
+     48.875,
+     51.31
+    ],
+    "diversity": 0.633,
+    "diversity_ci": [
+     0.619,
+     0.647
+    ],
+    "features": 3.53
+   },
+   "coercive": {
+    "mean": 0.9068,
+    "n": 36,
+    "words": 53.0,
+    "words_ci": [
+     51.815,
+     54.231
+    ],
+    "diversity": 0.646,
+    "diversity_ci": [
+     0.629,
+     0.663
+    ],
+    "features": 3.52,
+    "diff": 0.0015,
+    "p": 0.7118,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0053,
+     0.0082
+    ],
+    "equivalent": true
+   },
+   "authoritative": {
+    "mean": 0.9043,
+    "n": 36,
+    "words": 52.7,
+    "words_ci": [
+     51.657,
+     53.861
+    ],
+    "diversity": 0.594,
+    "diversity_ci": [
+     0.579,
+     0.61
+    ],
+    "features": 3.81,
+    "diff": -0.001,
+    "p": 0.8358,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0084,
+     0.0066
+    ],
+    "equivalent": true
+   },
+   "affiliative": {
+    "mean": 0.8999,
+    "n": 36,
+    "words": 52.2,
+    "words_ci": [
+     50.954,
+     53.44
+    ],
+    "diversity": 0.624,
+    "diversity_ci": [
+     0.607,
+     0.641
+    ],
+    "features": 3.7,
+    "diff": -0.0053,
+    "p": 0.2274,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0123,
+     0.0017
+    ],
+    "equivalent": true
+   },
+   "democratic": {
+    "mean": 0.9055,
+    "n": 36,
+    "words": 75.2,
+    "words_ci": [
+     73.153,
+     77.223
+    ],
+    "diversity": 0.634,
+    "diversity_ci": [
+     0.617,
+     0.652
+    ],
+    "features": 3.57,
+    "diff": 0.0002,
+    "p": 0.9617,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.007,
+     0.0072
+    ],
+    "equivalent": true
+   },
+   "pacesetting": {
+    "mean": 0.9026,
+    "n": 36,
+    "words": 55.7,
+    "words_ci": [
+     54.176,
+     57.269
+    ],
+    "diversity": 0.61,
+    "diversity_ci": [
+     0.597,
+     0.622
+    ],
+    "features": 3.72,
+    "diff": -0.0026,
+    "p": 0.5331,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0095,
+     0.0042
+    ],
+    "equivalent": true
+   },
+   "coaching": {
+    "mean": 0.9014,
+    "n": 36,
+    "words": 54.2,
+    "words_ci": [
+     52.903,
+     55.546
+    ],
+    "diversity": 0.651,
+    "diversity_ci": [
+     0.638,
+     0.664
+    ],
+    "features": 3.73,
+    "diff": -0.0039,
+    "p": 0.3494,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0106,
+     0.0027
+    ],
+    "equivalent": true
+   }
+  },
+  "turnaround": {
+   "control": {
+    "mean": 0.9268,
+    "n": 36,
+    "words": 56.4,
+    "words_ci": [
+     55.069,
+     57.745
+    ],
+    "diversity": 0.601,
+    "diversity_ci": [
+     0.587,
+     0.615
+    ],
+    "features": 2.39,
+    "improvement": 0.186,
+    "share_improved": 0.935
+   },
+   "coercive": {
+    "mean": 0.9277,
+    "n": 36,
+    "words": 58.0,
+    "words_ci": [
+     56.639,
+     59.375
+    ],
+    "diversity": 0.591,
+    "diversity_ci": [
+     0.574,
+     0.608
+    ],
+    "features": 2.32,
+    "improvement": 0.185,
+    "share_improved": 0.954,
+    "diff": 0.0009,
+    "p": 0.791,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0048,
+     0.0064
+    ],
+    "equivalent": true
+   },
+   "authoritative": {
+    "mean": 0.9259,
+    "n": 36,
+    "words": 62.0,
+    "words_ci": [
+     60.643,
+     63.458
+    ],
+    "diversity": 0.605,
+    "diversity_ci": [
+     0.589,
+     0.622
+    ],
+    "features": 2.48,
+    "improvement": 0.187,
+    "share_improved": 0.94,
+    "diff": -0.001,
+    "p": 0.8096,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0075,
+     0.0055
+    ],
+    "equivalent": true
+   },
+   "affiliative": {
+    "mean": 0.9222,
+    "n": 36,
+    "words": 57.3,
+    "words_ci": [
+     55.741,
+     58.82
+    ],
+    "diversity": 0.598,
+    "diversity_ci": [
+     0.574,
+     0.621
+    ],
+    "features": 2.38,
+    "improvement": 0.19,
+    "share_improved": 0.931,
+    "diff": -0.0046,
+    "p": 0.2193,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0106,
+     0.0013
+    ],
+    "equivalent": true
+   },
+   "democratic": {
+    "mean": 0.9254,
+    "n": 36,
+    "words": 77.5,
+    "words_ci": [
+     75.579,
+     79.523
+    ],
+    "diversity": 0.61,
+    "diversity_ci": [
+     0.592,
+     0.628
+    ],
+    "features": 2.19,
+    "improvement": 0.187,
+    "share_improved": 0.931,
+    "diff": -0.0014,
+    "p": 0.7041,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0074,
+     0.0046
+    ],
+    "equivalent": true
+   },
+   "pacesetting": {
+    "mean": 0.922,
+    "n": 36,
+    "words": 60.6,
+    "words_ci": [
+     59.102,
+     62.06
+    ],
+    "diversity": 0.568,
+    "diversity_ci": [
+     0.545,
+     0.591
+    ],
+    "features": 2.46,
+    "improvement": 0.191,
+    "share_improved": 0.963,
+    "diff": -0.0049,
+    "p": 0.2386,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0115,
+     0.0016
+    ],
+    "equivalent": true
+   },
+   "coaching": {
+    "mean": 0.9167,
+    "n": 36,
+    "words": 62.1,
+    "words_ci": [
+     60.444,
+     63.815
+    ],
+    "diversity": 0.617,
+    "diversity_ci": [
+     0.598,
+     0.635
+    ],
+    "features": 2.39,
+    "improvement": 0.196,
+    "share_improved": 0.954,
+    "diff": -0.0101,
+    "p": 0.0106,
+    "p_holm": 0.0639,
+    "ci90": [
+     -0.0163,
+     -0.0038
+    ],
+    "equivalent": true
+   }
+  }
+ },
+ "situation_means": {
+  "execution": 0.9367,
+  "exploration": 0.9037,
+  "turnaround": 0.9238
+ },
+ "style_span": {
+  "execution": 0.0061,
+  "exploration": 0.0069,
+  "turnaround": 0.011
+ },
+ "within_sd": {
+  "execution": 0.0091,
+  "exploration": 0.0181,
+  "turnaround": 0.0159
+ },
+ "tests": {
+  "T1_p": 0.469,
+  "T1_p_pilot": 0.505,
+  "T3": {
+   "sd_x": 0.0022,
+   "sd_y": 0.0025,
+   "diff": -0.0003,
+   "ci95": [
+    -0.0035,
+    0.001
+   ],
+   "p_one_sided_x_smaller": 0.1524
+  },
+  "E1_all": true,
+  "E1_n_eq": 18,
+  "E2_all": true,
+  "margin": 0.02,
+  "diversity_contrast": {
+   "execution": {
+    "contrast": 0.017,
+    "p": 0.0103
+   },
+   "exploration": {
+    "contrast": -0.0015,
+    "p": 0.8376
+   },
+   "turnaround": {
+    "contrast": 0.0282,
+    "p": 0.0024
+   }
+  }
+ },
+ "dids": {
+  "full": {
+   "D1_coercive_turnaround": {
+    "did": -0.0006,
+    "p": 0.9114,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0091,
+     0.008
+    ],
+    "equivalent": true
+   },
+   "D2_coaching_turnaround": {
+    "did": -0.0062,
+    "p": 0.2854,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0153,
+     0.0029
+    ],
+    "equivalent": true
+   },
+   "D3_pacesetting_execution": {
+    "did": 0.0023,
+    "p": 0.624,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0051,
+     0.01
+    ],
+    "equivalent": true
+   },
+   "D4_authoritative_exploration": {
+    "did": -0.0036,
+    "p": 0.479,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.012,
+     0.0047
+    ],
+    "equivalent": true
+   },
+   "D5_democratic_exploration": {
+    "did": 0.0007,
+    "p": 0.8874,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0073,
+     0.0087
+    ],
+    "equivalent": true
+   }
+  },
+  "pilot": {
+   "D1_coercive_turnaround": {
+    "did": 0.0136,
+    "p": 0.4236,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0111,
+     0.0386
+    ],
+    "equivalent": false
+   },
+   "D2_coaching_turnaround": {
+    "did": 0.0057,
+    "p": 0.8154,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0207,
+     0.0366
+    ],
+    "equivalent": false
+   },
+   "D3_pacesetting_execution": {
+    "did": -0.0002,
+    "p": 0.9902,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0234,
+     0.0232
+    ],
+    "equivalent": false
+   },
+   "D4_authoritative_exploration": {
+    "did": -0.0275,
+    "p": 0.0252,
+    "p_holm": 0.1262,
+    "ci90": [
+     -0.046,
+     -0.0097
+    ],
+    "equivalent": false
+   },
+   "D5_democratic_exploration": {
+    "did": 0.0017,
+    "p": 0.9223,
+    "p_holm": 1.0,
+    "ci90": [
+     -0.0242,
+     0.0267
+    ],
+    "equivalent": false
+   }
+  },
+  "spec": {
+   "D1_coercive_turnaround": {
+    "style": "coercive",
+    "x": "turnaround",
+    "y": "exploration"
+   },
+   "D2_coaching_turnaround": {
+    "style": "coaching",
+    "x": "turnaround",
+    "y": "exploration"
+   },
+   "D3_pacesetting_execution": {
+    "style": "pacesetting",
+    "x": "execution",
+    "y": "exploration"
+   },
+   "D4_authoritative_exploration": {
+    "style": "authoritative",
+    "x": "exploration",
+    "y": "execution"
+   },
+   "D5_democratic_exploration": {
+    "style": "democratic",
+    "x": "exploration",
+    "y": "execution"
+   }
+  }
+ },
+ "manipulation": {
+  "correct": 21,
+  "total": 21
+ },
+ "reference": {
+  "mean": 0.9093,
+  "sd": 0.019,
+  "n": 25
+ }
+}
