@@ -18,8 +18,8 @@ history unless one is written into its brief. That lets this study vary the task
 the best style still changes across situations, at least part of Goleman's contingency runs through
 the task rather than through emotions. If style never matters, that marks a boundary of the theory.
 
-Status: **design stage.** Frames, situations, grading and analysis are written and tested; the
-pre-registration is not yet frozen and no study draws have been made.
+Status: **pilot running.** The pre-registration was frozen on 2026-11-04 before any study draw; the
+pilot (5 blocks, 105 draws) is in progress.
 
 ## The task
 

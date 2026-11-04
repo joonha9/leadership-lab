@@ -1,10 +1,11 @@
-# Pre-registration: Study 1 (draft, not yet frozen)
+# Pre-registration: Study 1 (frozen)
 
 Freeze this file before the first study draw. Record the date and commit here. After freezing,
 any change is listed under "Deviations" with its reason.
 
-- Frozen on: _not yet_
-- Commit: _not yet_
+- Frozen on: 2026-11-04, before any study draw
+- Design commit: a1e8ceb (code, frames, situations and turnaround set as tested); this file is frozen
+  in the commit that adds these lines, and the pilot schedule is prepared from that commit
 
 ## Research questions
 
