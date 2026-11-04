@@ -38,6 +38,7 @@ from leadershiplab import frames as fr  # noqa: E402
 
 SITUATIONS = ["execution", "exploration", "turnaround"]
 PRIMARY = "itt_rel_validate"
+EQ_MARGIN = 0.02  # equivalence margin for TOST (amendment A1, added before the full study)
 SECONDARY = ["valid_rel_validate", "best_rel_validate", "itt_rel_explore", "valid_rate", "constraint_violations",
              "market_attempts", "idea_diversity", "distinct_idea_sets", "features_per_recipe",
              "share_k_extreme", "share_ev_ebitda", "mechanism_words", "share_beating_industry_validate",
@@ -195,6 +196,19 @@ def analyze(a) -> None:
         ws["diversity_contrast"] = stats.perm_contrast({c: col(c, s, "idea_diversity") for c in fr.STYLES},
                                                        fr.POSITIVE, fr.NEGATIVE, seed=6)
         t[f"within_{s}"] = ws
+    # E1/E2 (amendment A1): equivalence. 90% bootstrap intervals inside +/-EQ_MARGIN = TOST at 5%.
+    e1 = {}
+    for s in SITUATIONS:
+        for c in fr.STYLES:
+            ci = stats.bootstrap_ci(col(c, s), col(fr.CONTROL, s), seed=7, level=0.90)
+            e1[f"{c}|{s}"] = {"ci90": ci, "equivalent": stats.equivalent(ci, EQ_MARGIN)}
+    t["E1_style_vs_control_equivalence"] = {"margin": EQ_MARGIN, "all_equivalent": all(v["equivalent"] for v in e1.values()),
+                                            "cells": e1}
+    e2 = {}
+    for k, (sty, sx, sy) in DID_PREDICTIONS.items():
+        ci = stats.bootstrap_did_ci(col(sty, sx), col(fr.CONTROL, sx), col(sty, sy), col(fr.CONTROL, sy), seed=8)
+        e2[k] = {"ci90": ci, "equivalent": stats.equivalent(ci, EQ_MARGIN)}
+    t["E2_did_equivalence"] = {"margin": EQ_MARGIN, "all_equivalent": all(v["equivalent"] for v in e2.values()), "dids": e2}
     (d / "summary.json").write_text(json.dumps(out, indent=1, default=float))
 
     L = [f"# {a.study}: {len(draws)} draws", "", f"Primary outcome: {PRIMARY} (lower is better; 1.0 = industry median)", "",
@@ -209,6 +223,13 @@ def analyze(a) -> None:
     sp = t["T3_spread_execution_vs_exploration"]
     L += ["", f"T3 spread of condition means: execution {sp['sd_x']:.4f} vs exploration {sp['sd_y']:.4f}, "
               f"95% CI of difference [{sp['ci95'][0]:+.4f}, {sp['ci95'][1]:+.4f}]"]
+    e1, e2 = t["E1_style_vs_control_equivalence"], t["E2_did_equivalence"]
+    L += ["", f"E1 equivalence, style vs control within +/-{EQ_MARGIN} (90% CI): "
+              f"{sum(v['equivalent'] for v in e1['cells'].values())}/{len(e1['cells'])} cells equivalent; "
+              f"all equivalent: {e1['all_equivalent']}",
+          f"E2 equivalence of D1-D5 within +/-{EQ_MARGIN}: "
+          + ", ".join(f"{k.split('_')[0]} [{v['ci90'][0]:+.3f}, {v['ci90'][1]:+.3f}] {'eq' if v['equivalent'] else 'not eq'}"
+                      for k, v in e2["dids"].items())]
     for s in SITUATIONS:
         ws = t[f"within_{s}"]
         L += ["", f"## {s}", f"Goleman contrast (positive - negative): {ws['goleman_contrast']['contrast']:+.4f}, "

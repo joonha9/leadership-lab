@@ -153,3 +153,20 @@ def bootstrap_spread(groups_x: dict, groups_y: dict, n_boot: int = 5000, seed: i
     lo, hi = np.quantile(boot, [0.025, 0.975])
     return {"sd_x": sd(gx), "sd_y": sd(gy), "diff": sd(gx) - sd(gy), "ci95": (float(lo), float(hi)),
             "p_one_sided_x_smaller": float((np.sum(boot >= 0) + 1) / (n_boot + 1))}
+
+
+# ---------------------------------------------------------------- equivalence (TOST)
+
+def bootstrap_did_ci(s_x, c_x, s_y, c_y, n_boot: int = 10000, seed: int = 0, level: float = 0.90):
+    """Bootstrap interval for (s_x - c_x) - (s_y - c_y), resampling draws within each cell."""
+    s_x, c_x, s_y, c_y = map(_clean, (s_x, c_x, s_y, c_y))
+    rng = np.random.default_rng(seed)
+    b = lambda v: rng.choice(v, len(v)).mean()
+    d = [(b(s_x) - b(c_x)) - (b(s_y) - b(c_y)) for _ in range(n_boot)]
+    lo, hi = np.quantile(d, [(1 - level) / 2, (1 + level) / 2])
+    return float(lo), float(hi)
+
+
+def equivalent(ci90: tuple[float, float], margin: float) -> bool:
+    """TOST at alpha = 0.05: equivalent if the 90% interval lies inside (-margin, +margin)."""
+    return -margin < ci90[0] and ci90[1] < margin

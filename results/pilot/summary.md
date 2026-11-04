@@ -24,6 +24,9 @@ T1 interaction: SS 0.00063, p = 0.505
 
 T3 spread of condition means: execution 0.0040 vs exploration 0.0073, 95% CI of difference [-0.0103, +0.0013]
 
+E1 equivalence, style vs control within +/-0.02 (90% CI): 12/18 cells equivalent; all equivalent: False
+E2 equivalence of D1-D5 within +/-0.02: D1 [-0.011, +0.039] not eq, D2 [-0.021, +0.037] not eq, D3 [-0.023, +0.023] not eq, D4 [-0.046, -0.010] not eq, D5 [-0.024, +0.027] not eq
+
 ## execution
 Goleman contrast (positive - negative): -0.0003, p = 0.939; Spearman with climate -0.09
 

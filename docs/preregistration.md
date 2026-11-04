@@ -203,6 +203,22 @@ was scored as unusable, as pre-registered. Pooled within-cell SD of the primary 
 stopping rule above, the full study has **36 blocks (756 draws)**, with a new seed. Pilot draws are
 excluded from its confirmatory tests.
 
+## Amendment A1: equivalence tests (added 2026-11-04, after the pilot, before any full-study draw)
+
+The pilot points toward small or no style effects. A non-significant difference cannot show absence of
+an effect, so the full study adds equivalence tests (two one-sided tests, α = 0.05) with a margin of
+**±0.02** in relative error, about 2% of the industry median's error and the effect size the study is
+powered for. Equivalence holds when the 90% bootstrap interval lies inside (−0.02, +0.02).
+
+- **E1.** Each style against control within each situation (18 comparisons). The claim "no style
+  changes accuracy by more than 0.02 in any situation" requires all 18 to pass (intersection-union
+  test, no multiplicity correction needed).
+- **E2.** Each of D1–D5.
+
+E1 and E2 are reported alongside T1–T3. They do not replace them, and nothing else in the plan changes.
+Full-study seed: 2027. Power at 36 blocks and SD 0.0174 if the true difference is 0: about 0.99 per E1
+comparison and about 0.93 per E2 DiD.
+
 ## Deviations
 
 _None._

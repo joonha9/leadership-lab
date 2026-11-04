@@ -620,6 +620,179 @@
     "contrast": 0.013135912698412744,
     "p": 0.6738163091845407
    }
+  },
+  "E1_style_vs_control_equivalence": {
+   "margin": 0.02,
+   "all_equivalent": false,
+   "cells": {
+    "coercive|execution": {
+     "ci90": [
+      -0.004531897726962763,
+      0.01966914772278091
+     ],
+     "equivalent": true
+    },
+    "authoritative|execution": {
+     "ci90": [
+      0.0018446323145144396,
+      0.02104924932060892
+     ],
+     "equivalent": false
+    },
+    "affiliative|execution": {
+     "ci90": [
+      -0.004650588688638587,
+      0.015512124680103545
+     ],
+     "equivalent": true
+    },
+    "democratic|execution": {
+     "ci90": [
+      -0.01180792700897334,
+      0.013769657738475726
+     ],
+     "equivalent": true
+    },
+    "pacesetting|execution": {
+     "ci90": [
+      -0.002380989140566271,
+      0.014009664269415344
+     ],
+     "equivalent": true
+    },
+    "coaching|execution": {
+     "ci90": [
+      -0.002102449236656934,
+      0.01668009535508097
+     ],
+     "equivalent": true
+    },
+    "coercive|exploration": {
+     "ci90": [
+      -0.018731893040840504,
+      0.015761079299427595
+     ],
+     "equivalent": true
+    },
+    "authoritative|exploration": {
+     "ci90": [
+      -0.031812355411528985,
+      -0.001284399914595809
+     ],
+     "equivalent": false
+    },
+    "affiliative|exploration": {
+     "ci90": [
+      -0.015642959310510695,
+      0.018923453059946308
+     ],
+     "equivalent": true
+    },
+    "democratic|exploration": {
+     "ci90": [
+      -0.019328130872503846,
+      0.024368939985627065
+     ],
+     "equivalent": false
+    },
+    "pacesetting|exploration": {
+     "ci90": [
+      -0.01491515340384296,
+      0.027838686709250035
+     ],
+     "equivalent": false
+    },
+    "coaching|exploration": {
+     "ci90": [
+      -0.012307036607974275,
+      0.015629778390887417
+     ],
+     "equivalent": true
+    },
+    "coercive|turnaround": {
+     "ci90": [
+      -0.004613501558993538,
+      0.03032081222548544
+     ],
+     "equivalent": false
+    },
+    "authoritative|turnaround": {
+     "ci90": [
+      -0.004194772841654598,
+      0.012892839135547618
+     ],
+     "equivalent": true
+    },
+    "affiliative|turnaround": {
+     "ci90": [
+      -0.014009068016108324,
+      0.005233676630038094
+     ],
+     "equivalent": true
+    },
+    "democratic|turnaround": {
+     "ci90": [
+      -0.019222313477405092,
+      0.0028682824797805484
+     ],
+     "equivalent": true
+    },
+    "pacesetting|turnaround": {
+     "ci90": [
+      -0.019726673985966336,
+      0.005994178879560854
+     ],
+     "equivalent": true
+    },
+    "coaching|turnaround": {
+     "ci90": [
+      -0.012567175186692599,
+      0.03624386203413072
+     ],
+     "equivalent": false
+    }
+   }
+  },
+  "E2_did_equivalence": {
+   "margin": 0.02,
+   "all_equivalent": false,
+   "dids": {
+    "D1_coercive_turnaround": {
+     "ci90": [
+      -0.011083662685309621,
+      0.03864039995132238
+     ],
+     "equivalent": false
+    },
+    "D2_coaching_turnaround": {
+     "ci90": [
+      -0.02065122492918811,
+      0.0365784728763382
+     ],
+     "equivalent": false
+    },
+    "D3_pacesetting_execution": {
+     "ci90": [
+      -0.023434811713127106,
+      0.023185986075506326
+     ],
+     "equivalent": false
+    },
+    "D4_authoritative_exploration": {
+     "ci90": [
+      -0.04596443347196744,
+      -0.009719560136500332
+     ],
+     "equivalent": false
+    },
+    "D5_democratic_exploration": {
+     "ci90": [
+      -0.024235257339449767,
+      0.026683135257215926
+     ],
+     "equivalent": false
+    }
+   }
   }
  }
 }
