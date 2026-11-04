@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+# FactSet data is licensed: never commit it
+data/
+*.xlsx
+*.pkl
