@@ -18,10 +18,14 @@ history unless one is written into its brief. That lets this study vary the task
 the best style still changes across situations, at least part of Goleman's contingency runs through
 the task rather than through emotions. If style never matters, that marks a boundary of the theory.
 
-Status: **pilot complete** (105 draws, `results/pilot/REPORT.md`). Leadership tone barely moved
-accuracy (within about 0.02 inside each situation), while the task situation dominated. No pre-registered
-test is significant at pilot scale. Democratic frames produced 25–40% longer reasoning without better
-recipes. The full study (36 blocks, 756 draws) is sized but not started.
+Status: **Study 1 complete** (756 draws; [`results/full/REPORT.md`](results/full/REPORT.md)).
+
+**Findings.** Leadership style did not change the accuracy of the AI analyst's work in any situation.
+All 18 style-against-control differences are statistically equivalent to zero within ±0.02, and none of
+Goleman's situation matches holds (interaction p = 0.47). The task situation moves accuracy about three
+times as much as any style. Style changed how the analyst works instead. Goleman's "negative" styles
+(coercive, pacesetting) produced less varied ideas in two of three situations, and democratic messages
+produced 35–50% longer reasoning, without any gain in accuracy.
 
 ## The task
 

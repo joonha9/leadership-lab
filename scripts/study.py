@@ -118,16 +118,27 @@ def status(a) -> None:
         print(d / "draws" / r["draw_id"] / "prompt.md")
 
 
-def grade(a) -> None:
+def _grade_one(args):
     from leadershiplab.grading import grade_reply
+    r, text = args
+    g = grade_reply(r["draw_id"], text, r["situation"])
+    g.update(condition=r["condition"], block=int(r["block"]))
+    return g
+
+
+def grade(a) -> None:
     d = study_dir(a.study)
+    jobs = [(r, (d / "draws" / r["draw_id"] / "reply.txt").read_text()) for r in read_schedule(d)
+            if (d / "draws" / r["draw_id"] / "reply.txt").exists()]
+    if a.workers > 1:  # each draw is graded independently, so results do not depend on the split
+        from multiprocessing import Pool
+        with Pool(a.workers) as pool:
+            results = pool.map(_grade_one, jobs, chunksize=4)
+    else:
+        results = map(_grade_one, jobs)
     graded, flat = [], []
-    for r in read_schedule(d):
-        p = d / "draws" / r["draw_id"] / "reply.txt"
-        if not p.exists():
-            continue
-        g = grade_reply(r["draw_id"], p.read_text(), r["situation"])
-        g.update(condition=r["condition"], block=int(r["block"]))
+    for g in results:
+        r = {"draw_id": g["draw_id"], "situation": g["situation"]}
         graded.append(g)
         flat.append({k: v for k, v in g.items() if k != "proposals"})
         print(f"{r['draw_id']} {r['situation']:11s} graded {g['n_graded']}/6  {PRIMARY} {g[PRIMARY]:.3f}")
@@ -249,5 +260,7 @@ ap.add_argument("--seed", type=int, default=2026)
 ap.add_argument("--next", type=int, default=21)
 ap.add_argument("--proposer", default="claude-code-subagent (general-purpose, model inherited from session)")
 ap.add_argument("--exclude-blocks", type=int, nargs="*", default=[])
-a = ap.parse_args()
-{"prepare": prepare, "status": status, "grade": grade, "analyze": analyze}[a.cmd](a)
+ap.add_argument("--workers", type=int, default=1)
+if __name__ == "__main__":
+    a = ap.parse_args()
+    {"prepare": prepare, "status": status, "grade": grade, "analyze": analyze}[a.cmd](a)

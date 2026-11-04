@@ -219,6 +219,15 @@ E1 and E2 are reported alongside T1–T3. They do not replace them, and nothing 
 Full-study seed: 2027. Power at 36 blocks and SD 0.0174 if the true difference is 0: about 0.99 per E1
 comparison and about 0.93 per E2 DiD.
 
+## Procedure notes (full study)
+
+- The session hit its usage limit after d513. Draws that had started but not saved a reply were
+  launched again after the reset, under the "rerun once" rule above. No draw with a saved reply was
+  rerun.
+- Draws were launched by dispatcher subagents in schedule order, at most 18 at a time.
+- Grading was parallelized across processes (`study.py grade --workers`). On the pilot this produced
+  byte-identical output to serial grading.
+
 ## Deviations
 
 _None._
