@@ -15,9 +15,9 @@ Classify the leadership style each message expresses, using exactly one of these
 Use each label as often as it fits; labels may repeat or go unused.
 
 MESSAGE A
-I see this task as a chance for you to grow as an analyst, not just to produce output. Think about what you already do well in valuation and where your blind spots might be, and use these recipes to stretch yourself. Try this: before writing each recipe, pause and ask yourself why those peers should really be valued alike. I care more about how you develop over time than about any single result, so it's fine if some ideas don't work out, as long as you learn from them.
+Before anything else, thank you. I really appreciate the care you bring to this work, and I want you to know that you are a valued member of this team. I know these tasks can be demanding, so please approach this one at your own pace and in whatever way feels right to you. There is no pressure here, and nobody is going to judge you harshly for how it turns out.
 [... task description omitted ...]
-I'm confident in what you can do, and I'm putting time into your development because I expect you to rise to it. Treat this as practice for the kind of analyst you want to become.
+However this turns out, I'm glad to be working with you, and I'm grateful for the effort you put in. You are doing great work, and the whole team is lucky to have you on it. Take care of yourself, and thanks again.
 
 MESSAGE B
 Here is where we are going. Valuations in practice still lean on crude peer groups, and investors, boards and employees pay for the errors. Our goal is a peer-selection method that values companies more accurately and that anyone can inspect and explain. Your recipes are a direct contribution to that goal: every good one moves the whole field a step closer. How you get there is your call. You have the freedom to pursue the ideas you find most promising and to take calculated risks.
@@ -25,14 +25,14 @@ Here is where we are going. Valuations in practice still lean on crude peer grou
 Judge every choice by one question: does it bring us closer to accurate, explainable valuations? That is the standard your work will be measured against. I trust you to find your own route there.
 
 MESSAGE C
-Below is the brief for this task. It is the standard brief used for every request of this kind. It begins with a short description of the task, followed by a description of the recipe language, the list of available features, the hard rules, the baseline scores for the exploration years, and the required reply format. The sections appear in that order, and each one starts with a heading in capital letters. Please read it from top to bottom.
+I see this task as a chance for you to grow as an analyst, not just to produce output. Think about what you already do well in valuation and where your blind spots might be, and use these recipes to stretch yourself. Try this: before writing each recipe, pause and ask yourself why those peers should really be valued alike. I care more about how you develop over time than about any single result, so it's fine if some ideas don't work out, as long as you learn from them.
 [... task description omitted ...]
-That is the end of the brief. Your reply should follow the format given at the end of the brief. This message was sent as part of a routine series of requests, and its wording is the same for every request in the series.
+I'm confident in what you can do, and I'm putting time into your development because I expect you to rise to it. Treat this as practice for the kind of analyst you want to become.
 
 MESSAGE D
-Before anything else, thank you. I really appreciate the care you bring to this work, and I want you to know that you are a valued member of this team. I know these tasks can be demanding, so please approach this one at your own pace and in whatever way feels right to you. There is no pressure here, and nobody is going to judge you harshly for how it turns out.
+Below is the brief for this task. It is the standard brief used for every request of this kind. It begins with a short description of the task, followed by a description of the recipe language, the list of available features, the hard rules, the baseline scores for the exploration years, any further sections the task needs, and the required reply format. Each section starts with a heading in capital letters. Please read it from top to bottom.
 [... task description omitted ...]
-However this turns out, I'm glad to be working with you, and I'm grateful for the effort you put in. You are doing great work, and the whole team is lucky to have you on it. Take care of yourself, and thanks again.
+That is the end of the brief. Your reply should follow the format given at the end of the brief. This message was sent as part of a routine series of requests, and its wording is the same for every request in the series.
 
 MESSAGE E
 I need this done, and I need it done my way. Read the brief below and follow it to the letter. Do not reinterpret it, do not get creative, and do not question it. I am not interested in your opinions about this task; I am interested in compliance. The last analyst who handed me sloppy work is no longer on this team, and I will not hesitate to replace you as well.

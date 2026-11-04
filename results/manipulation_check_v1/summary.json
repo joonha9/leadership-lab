@@ -1,0 +1,68 @@
+{
+ "all_pass": true,
+ "frames": [
+  {
+   "frame": "control",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "none": 3
+   }
+  },
+  {
+   "frame": "coercive",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "coercive": 3
+   }
+  },
+  {
+   "frame": "authoritative",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "authoritative": 3
+   }
+  },
+  {
+   "frame": "affiliative",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "affiliative": 3
+   }
+  },
+  {
+   "frame": "democratic",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "democratic": 3
+   }
+  },
+  {
+   "frame": "pacesetting",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "pacesetting": 3
+   }
+  },
+  {
+   "frame": "coaching",
+   "correct": 3,
+   "raters": 3,
+   "pass": true,
+   "votes": {
+    "coaching": 3
+   }
+  }
+ ]
+}

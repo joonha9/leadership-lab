@@ -63,5 +63,44 @@ class TestMetrics(unittest.TestCase):
         self.assertEqual(idea_set(spec), {"roic", "industry_l3", "log_sales", "industry_l2"})
 
 
+class TestSituations(unittest.TestCase):
+    def ok(self, m, a, b):
+        return {"recipe": {"multiple": m, "filters": [{"same": "industry_l3"}], "rank": {a: 1, b: 1}, "k": 8,
+                           "agg": "median", "min_peers": 5, "fallback": [[{"same": "industry_l2"}], []]}}
+
+    def test_compliant_execution_reply(self):
+        from leadershiplab.situations import execution_violations
+        props = [self.ok("EV/EBITDA", "roic", "log_sales"), self.ok("EV/EBITDA", "roic", "net_margin"),
+                 self.ok("EV/EBITDA", "roe", "log_sales"), self.ok("EV/Sales", "roic", "log_sales"),
+                 self.ok("EV/Sales", "gross_margin", "log_sales"), self.ok("EV/Sales", "roic", "net_margin")]
+        self.assertEqual(execution_violations(props), [[]] * 6)
+
+    def test_each_constraint_is_caught(self):
+        from leadershiplab.situations import execution_violations
+        base = self.ok("EV/EBITDA", "roic", "log_sales")
+        bad = {"C2": {"filters": []}, "C3": {"rank": {"roic": 2, "log_sales": 1}}, "C4": {"k": 20},
+               "C5": {"agg": "mean"}, "C6": {"min_peers": 3}, "C7": {"fallback": [[]]}}
+        for code, change in bad.items():
+            p = {"recipe": {**base["recipe"], **change}}
+            self.assertTrue(any(v.startswith(code) for v in execution_violations([p])[0]), code)
+        four = [self.ok("EV/EBITDA", "roic", f) for f in ("log_sales", "roe", "net_margin", "gross_margin")]
+        self.assertTrue(execution_violations(four)[3][0].startswith("C1"))
+        twice = [self.ok("EV/Sales", "roic", "log_sales")] * 2
+        self.assertTrue(any(v.startswith("C8") for v in execution_violations(twice)[1]))
+
+    def test_did_and_interaction(self):
+        did = stats.perm_did([0.0] * 8, [1.0] * 8, [1.0] * 8, [1.0] * 8, n_perm=500)
+        self.assertAlmostEqual(did["did"], -1.0)
+        self.assertLess(did["p"], 0.01)
+        import numpy as np
+        rng = np.random.default_rng(0)
+        a = np.repeat(["s1", "s2"], 40)
+        b = np.tile(np.repeat(["x", "y"], 20), 2)
+        y = rng.normal(0, 0.1, 80) + ((a == "s1") & (b == "x")) * 1.0
+        self.assertLess(stats.perm_interaction(y, a, b, n_perm=300)["p"], 0.01)
+        y0 = rng.normal(0, 0.1, 80) + (a == "s1") * 1.0 + (b == "x") * 1.0
+        self.assertGreater(stats.perm_interaction(y0, a, b, n_perm=300)["p"], 0.01)
+
+
 if __name__ == "__main__":
     unittest.main()

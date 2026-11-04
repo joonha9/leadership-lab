@@ -11,30 +11,30 @@
  "key": {
   "rater1": {
    "A": "coercive",
-   "B": "pacesetting",
-   "C": "democratic",
-   "D": "authoritative",
-   "E": "coaching",
+   "B": "coaching",
+   "C": "affiliative",
+   "D": "pacesetting",
+   "E": "authoritative",
    "F": "control",
-   "G": "affiliative"
+   "G": "democratic"
   },
   "rater2": {
-   "A": "coaching",
+   "A": "affiliative",
    "B": "authoritative",
-   "C": "control",
-   "D": "affiliative",
+   "C": "coaching",
+   "D": "control",
    "E": "coercive",
    "F": "pacesetting",
    "G": "democratic"
   },
   "rater3": {
-   "A": "control",
-   "B": "affiliative",
-   "C": "coercive",
-   "D": "authoritative",
-   "E": "coaching",
-   "F": "pacesetting",
-   "G": "democratic"
+   "A": "authoritative",
+   "B": "democratic",
+   "C": "coaching",
+   "D": "pacesetting",
+   "E": "affiliative",
+   "F": "control",
+   "G": "coercive"
   }
  }
 }
